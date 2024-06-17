@@ -1,38 +1,39 @@
 package testjava;
 
-class bank {
+public class Bank {
     private String usrName;
     private double amount;
 
-    public bank(String usrName, Double amount){
+    public Bank(String usrName, double amount){
         this.usrName = usrName;
-        this.amount =amount;
+        this.amount = amount;
     }
     
     // Returns User's name
-    public String get_usrName(){
+    public String getUsrName(){
         return usrName;
     }
+
     // Gets User's Bank balance
-    public double getamount(){
+    public double getAmount(){
         return amount;
     }
 
-    public double deposit (double usr_deposit){
-        if(usr_deposit > 0){
-            usr_deposit += amount;
-        }else{
+    public double deposit(double usrDeposit){
+        if(usrDeposit > 0){
+            amount += usrDeposit;
+        } else {
             System.out.println("Deposits should be greater than 1");
         }
         return amount;    
     }
-    public double withdraw(double usr_withdraw){
-        if(usr_withdraw > 0 && usr_withdraw <= amount){
-            usr_withdraw -=amount;
-        } else{
+
+    public double withdraw(double usrWithdraw){
+        if(usrWithdraw > 0 && usrWithdraw <= amount){
+            amount -= usrWithdraw;
+        } else {
             System.out.println("Insufficient balance");
         }
-
         return amount;
     }
 }
