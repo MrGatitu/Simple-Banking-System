@@ -1,4 +1,4 @@
-package testjava;
+package SimpleBankingSystem;
 
 public class Bank {
     private String usrName;
